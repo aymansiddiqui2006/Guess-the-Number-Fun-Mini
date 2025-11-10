@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Number Guessing Game</title>
+</head>
+<body class="min-h-screen flex items-center justify-center 
+bg-[linear-gradient(to_right,#ff8177_0%,#ff867a_0%,#ff8c7f_21%,#f99185_52%,#cf556c_78%,#b12a5b_100%)]">
+    <div id="wrapper" class="flex flex-col items-center justify-center border-4 border-pink-900 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.8)]
+  h-[356px] w-[450px] bg-white/30">
+        <h1 class="text-3xl font-extrabold text-gray mb-4">Number guessing game</h1>
+        <p class="font-bold">Try and guess a random number between 1 and 100.</p>
+        <p class="font-bold">You have 10 attempts to guess the right number.</p>
+        <br>
+
+        <form class="form flex flex-col items-center">
+            <label for="guessField" id="guess" class="font-bold">Guess a number</label>
+            <input type="text" id="guessField" class="guessField rounded-xl shadow-xl p-2">
+            <input type="submit" id="subt" value="Submit guess" class="guessSubmit border-2 border-pink-600 rounded-2xl bg-white/40 p-1 mt-2 hover:bg-pink-600 hover:scale-95 hover:shadow-[0_10px_30px_rgba(0,0,0,0.4)] duration">
+        </form>
+
+        <div class="resultParas">
+            <p>Previous Guesses: <span class="guesses"></span></p>
+            <p>Guesses Remaining: <span class="lastResult">10</span></p>
+            <p class="lowOrHi"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
